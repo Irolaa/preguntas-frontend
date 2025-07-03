@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --green-shadow: #3657d0;
+  /* Assuming --primary, --secondary, --text-color are defined elsewhere or will be in dark mode */
+}
+
+/* Fondo ajustado a la animación */
+.welcome-wrapper {
+  min-height: 100vh;
+  background-color: #FBFBFB; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-4) var(--spacing-2);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.welcome-logo {
+  margin-top: var(--spacing-2);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  color: var(--primary); /* Keep using var(--primary) for light mode */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.welcome-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.welcome-illustration {
+  width: 300px;
+  max-width: 90vw;
+}
+
+.welcome-text {
+  max-width: 400px;
+  text-align: center;
+}
+
+.welcome-text h1 {
+  font-size: var(--text-xl);
+  color: var(--text-color); /* Keep using var(--text-color) for light mode */
+  margin-bottom: var(--spacing-2);
+  font-weight: 600;
+}
+
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.welcome-buttons button {
+  font-size: var(--text-base);
+  font-weight: 500;
+  padding: var(--spacing-2);
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.welcome-button-primary {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 0 var(--green-shadow);
+}
+
+.welcome-button-primary:hover {
+  background-color: var(--secondary);
+}
+
+.welcome-button-secondary {
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.welcome-button-secondary:hover {
+  background-color: #eef1ff;
+}
+
+.welcome-footer {
+  font-size: var(--text-sm);
+  color: #888;
+  padding: var(--spacing-2);
+}
+
+.slide-out {
+  transform: translateX(-100vw);
+  opacity: 0;
+}
+
+/* ========================== */
+/* DARK MODE FOR WELCOME SECTION */
+/* ========================== */
+.dark .welcome-wrapper {
+  background-color: #1a1a2a; 
+  color: #e0e0e0; 
+}
+
+.dark .welcome-logo {
+  color: var(--primary); 
+}
+
+.dark .welcome-text h1 {
+  color: #f0f0f0; 
+}
+
+.dark .welcome-button-primary {
+  background-color: var(--primary); 
+  color: #1a1a2a; 
+  box-shadow: 0 4px 0 #121212; 
+}
+
+.dark .welcome-button-primary:hover {
+  background-color: var(--secondary); 
+}
+
+.dark .welcome-button-secondary {
+  background-color: #1e1e2f; 
+  color: var(--primary); 
+  border: 2px solid var(--primary); 
+}
+
+.dark .welcome-button-secondary:hover {
+  background-color: #2a2a3d; 
+}
+
+.dark .welcome-footer {
+  color: #aaaaaa; 
+}
+
+.dark {
+  --primary: #90caf9; 
+  --secondary: #7986cb; 
+  --text-color: #e0e0e0; 
+  --green-shadow: #0a0a0a; 
+}

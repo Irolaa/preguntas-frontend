@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --green-shadow: #3657d0;
+  --primary: #3657d0;
+  --secondary: #2f49b5;
+  --text-color: #333;
+}
+
+.verification-wrapper {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background-color: #f5f7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.verification-card {
+  background-color: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+}
+
+.verification-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.ant-input {
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.ant-btn-primary {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 0 var(--green-shadow);
+}
+
+.ant-btn-primary:hover {
+  background-color: var(--secondary);
+}
+
+/* ========================== */
+/* DARK MODE FOR VERIFICATION SECTION */
+/* ========================== */
+.dark {
+  --primary: #90caf9;
+  --secondary: #7986cb;
+  --text-color: #e0e0e0;
+  --green-shadow: #121212;
+}
+
+.dark .verification-wrapper {
+  background-color: #121212; 
+}
+
+.dark .verification-card {
+  background-color: #1e1e2f; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); 
+}
+
+.dark .verification-title {
+  color: var(--primary); 
+}
+
+.dark .ant-form-item-label > label {
+  color: #f0f0f0; 
+}
+
+.dark .ant-input {
+  background-color: #2a2a3d; 
+  color: #e0e0e0; 
+  border-color: #555; 
+}
+
+.dark .ant-input::placeholder {
+  color: #aaaaaa;
+}
+
+.dark .ant-btn-primary {
+  background-color: var(--primary); 
+  color: #121212;
+  box-shadow: 0 4px 0 var(--green-shadow); 
+}
+
+.dark .ant-btn-primary:hover {
+  background-color: var(--secondary); 
+}

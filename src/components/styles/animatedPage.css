@@ -1,0 +1,10 @@
+.page-transition {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.4s ease;
+}
+
+.page-transition.enter {
+  opacity: 1;
+  transform: translateX(0);
+}

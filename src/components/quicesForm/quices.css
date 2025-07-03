@@ -1,0 +1,343 @@
+/* Contenedor principal para vistas de quizzes */
+.quiz-container {
+  padding: 16px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 16px;
+}
+
+
+/* Botón de regreso en vistas */
+.quiz-back-button {
+  margin-bottom: 8px;
+}
+
+/* Título centralizado */
+.quiz-title {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 8px;
+}
+
+/* Subtítulo debajo del título */
+.quiz-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 16px;
+}
+
+/* Fila de filtros (select + input) */
+.quiz-filter-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* Bloque individual de preguntas */
+.quiz-question-block {
+  margin-bottom: 32px;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  background-color: #fafafa;
+  position: relative;
+}
+
+/* Encabezado de la pregunta */
+.quiz-question-header {
+  display: flex; /* Habilitar Flexbox */
+  flex-direction: column; /* Apilar elementos verticalmente */
+  align-items: flex-start; /* Alinear elementos al inicio */
+  margin-bottom: 12px; /* Espacio debajo del encabezado */
+}
+
+/* Contenido del encabezado de la pregunta (título y bandera) */
+.quiz-question-header-content {
+  display: flex; /* Habilitar Flexbox para el título y la bandera */
+  justify-content: space-between; /* Espacio entre el título y la bandera */
+  align-items: center; /* Centrar verticalmente */
+  width: 100%; /* Ocupar todo el ancho disponible */
+  margin-bottom: 8px; /* Espacio debajo del contenido del encabezado */
+}
+
+.quiz-question-header h3 {
+  margin-bottom: 0; /* Eliminar margen inferior del h3 para que no afecte el alineamiento */
+}
+
+/* Estilo de cada opción de respuesta */
+.quiz-answer-option {
+  display: block;
+  margin: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  background-color: #f9f9f9;
+  border: 1px solid transparent;
+}
+
+.quiz-answer-option input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #1890ff;
+}
+
+.quiz-answer-option:hover {
+  background-color: #e6f7ff;
+  border-color: #91d5ff;
+}
+
+/* Colores para respuestas */
+.quiz-answer-correct {
+  color: green;
+}
+
+.quiz-answer-incorrect {
+  color: red;
+}
+
+/* Tabla de historial de quizzes */
+.quiz-history-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.quiz-history-table {
+  margin-top: 16px;
+}
+
+/* Alerta de advertencia */
+.quiz-warning {
+  margin-top: 16px;
+}
+
+/* Bloque de sesión de preguntas */
+.quiz-session {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Resultado del quiz */
+.quiz-result-block {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: #e6fffb;
+  border-left: 6px solid #36cfc9;
+  border-radius: 8px;
+  color: #00474f;
+}
+
+.quiz-result-block h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.quiz-redirect-msg {
+  margin-top: 12px;
+  font-style: italic;
+  color: #888;
+}
+.quiz-question-image {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: block;
+}
+/* ============================= */
+/* DARK MODE           */
+/* ============================= */
+
+.dark .quiz-title,
+.dark .quiz-subtitle,
+.dark .quiz-history-title {
+  color: #90caf9;
+}
+
+.dark .quiz-container,
+.dark .quiz-session,
+.dark .quiz-question-block {
+  background-color: #1e1e2f;
+  color: #e0e0e0;
+}
+
+.dark .quiz-answer-option {
+  background-color: #2a2a3d;
+  color: #e0e0e0;
+  border: 1px solid #3a3a3a;
+}
+
+.dark .quiz-answer-option:hover {
+  background-color: #3949ab;
+  border-color: #5c6bc0;
+}
+
+.dark .quiz-result-block {
+  background-color: #00363a;
+  border-left: 6px solid #00acc1;
+  color: #b2ebf2;
+}
+
+.dark .quiz-redirect-msg {
+  color: #aaa;
+}
+
+.dark .quiz-history-table .ant-table-thead > tr > th,
+.dark .quiz-history-table .ant-table-tbody > tr > td {
+  background-color: #1e1e2f;
+  color: #e0e0e0;
+}
+
+.dark .ant-btn-link {
+  color: #90caf9;
+}
+
+/* Estilo para headers de tabla en modo oscuro */
+.dark .ant-table-thead > tr > th {
+  color: white !important;
+  background-color: #1e1e2f !important;
+  border-color: #333 !important;
+}
+
+/* Y por si acaso, el texto del cuerpo también */
+.dark .quiz-history-table .ant-table-tbody > tr > td {
+  color: #e0e0e0 !important;
+  background-color: #121212 !important;
+  border-color: #333 !important;
+}
+
+/* Ícono de "no data" también claro */
+.dark .ant-empty-description {
+  color: #ccc !important;
+}
+
+/* Aplica a Input de cantidad (texto visible dentro del input) */
+.dark input::placeholder,
+.dark .ant-input::placeholder,
+.dark .ant-input-number-input::placeholder {
+  color: #bbb !important;
+}
+.report-form {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.report-form-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.report-reason-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.report-reason-item {
+  margin-bottom: 8px;
+}
+
+.report-comment {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  font-size: 14px;
+  resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.report-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.flag-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+.dark .report-form {
+  background-color: #2a2a3d;
+  border: 1px solid #444;
+  color: #e0e0e0;
+}
+
+.dark .report-comment {
+  background-color: #1e1e2f;
+  color: #e0e0e0;
+  border-color: #555; 
+}
+
+.dark .report-form-title {
+  color: #90caf9;
+}
+
+.dark .report-reason-item label {
+  color: #e0e0e0;
+}
+
+.dark .report-buttons .ant-btn {
+  background-color: #3949ab;
+  color: white;
+  border-color: #5c6bc0;
+}
+/* Estilo para el texto dentro del input del Select (cuando ya hay una categoría seleccionada) */
+.dark .ant-select-selector .ant-select-selection-item-content {
+  color: #ffffff !important; /* Texto blanco para las categorías seleccionadas */
+}
+
+/* Estilo para la "x" de eliminar (close icon) en las categorías seleccionadas */
+.dark .ant-select-selector .ant-tag-close-icon {
+  color: #ffffff !important; /* Icono de la "x" blanco */
+}
+
+/* Estilo para el texto de las opciones en el dropdown */
+.dark .ant-select-dropdown .ant-select-item-option-content {
+  color: #ffffff !important; /* Texto blanco para todas las opciones del dropdown */
+}
+/* Estilo para la opción activa (cuando pasas el mouse por encima) */
+.dark .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #3949ab !important; /* Un azul oscuro que combine con tu tema */
+  color: #ffffff !important; /* Texto blanco */
+}
+
+/* Estilo para la opción seleccionada */
+.dark .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #5c6bc0 !important; /* Un azul un poco más claro para la seleccionada */
+  color: #ffffff !important; /* Texto blanco */
+  font-weight: 600; /* Opcional: para que se vea un poco más fuerte si está seleccionado */
+}
+
+/* Asegurar que el texto dentro de la opción seleccionada siga siendo blanco */
+.dark .ant-select-item-option-selected:not(.ant-select-item-option-disabled) .ant-select-item-option-content {
+  color: #ffffff !important;
+}
+
+/* Asegurar que el "tick" (el checkmark) de la opción seleccionada sea blanco */
+.dark .ant-select-item-option-selected:not(.ant-select-item-option-disabled) .ant-select-item-option-state {
+  color: #ffffff !important;
+}
+
+/* Placeholder del selector en dark (texto dentro del input cuando no hay selección) */
+.dark .ant-select-selection-placeholder {
+  color: #ffffff !important; /* Placeholder en blanco */
+}
+

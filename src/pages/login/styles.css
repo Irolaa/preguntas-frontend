@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --green-shadow: #3657d0;
+}
+
+.login-wrapper {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background-color: #f5f7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.login-card {
+  background-color: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-form .ant-form-item-label > label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.login-form .ant-input,
+.login-form .ant-input-password {
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.login-form .ant-btn-primary {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 0 var(--green-shadow);
+}
+
+.login-form .ant-btn-primary:hover {
+  background-color: var(--secondary);
+}
+
+.login-footer-link {
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ========================== */
+/* DARK MODE FOR LOGIN SECTION */
+/* ========================== */
+.dark {
+  --primary: #90caf9;
+  --secondary: #7986cb;
+  --text-color: #e0e0e0;
+  --green-shadow: #121212;
+}
+
+.dark .login-wrapper {
+  background-color: #121212;
+}
+
+.dark .login-card {
+  background-color: #1e1e2f;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.dark .login-title {
+  color: var(--primary);
+}
+
+.dark .login-form .ant-form-item-label > label {
+  color: #f0f0f0;
+}
+
+.dark .login-form .ant-input,
+.dark .login-form .ant-input-password {
+  background-color: #2a2a3d;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.dark .login-form .ant-input::placeholder,
+.dark .login-form .ant-input-password::placeholder {
+  color: #aaaaaa;
+}
+
+.dark .login-form .ant-btn-primary {
+  background-color: var(--primary);
+  color: #121212;
+  box-shadow: 0 4px 0 var(--green-shadow);
+}
+
+.dark .login-form .ant-btn-primary:hover {
+  background-color: var(--secondary);
+}
+
+.dark .login-footer-link {
+  color: var(--primary);
+}

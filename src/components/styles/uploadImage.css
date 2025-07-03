@@ -1,0 +1,30 @@
+.upload-large .ant-upload {
+	width: 200px !important;
+	height: 200px !important;
+}
+
+.upload-large .ant-upload-list-item {
+	width: 200px !important;
+	height: 200px !important;
+}
+
+.upload-large
+	.ant-upload-list-picture-card
+	.ant-upload-list-item-thumbnail
+	img {
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover; /* Para que la imagen mantenga proporciones */
+}
+
+/* Estilos básicos para UploadImage */
+.upload-large {
+	width: 100%;
+	height: auto;
+	border: 1px dashed #d9d9d9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	color: #999;
+}

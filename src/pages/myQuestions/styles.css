@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.my-questions-container {
+  padding: var(--spacing-4);
+  background: var(--background);
+  min-height: 100vh;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.my-questions-container h2 {
+  font-size: var(--text-xl);
+  color: var(--primary);
+  margin-bottom: var(--spacing-3);
+  font-weight: 600;
+}
+
+.my-question-card {
+  background: white;
+  border-radius: 16px;
+  padding: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.my-question-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.my-question-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--spacing-1);
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.my-question-card p {
+  font-size: var(--text-sm);
+  color: var(--text-color);
+  margin: 4px 0;
+}
+
+.my-question-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: #777;
+  margin-top: var(--spacing-1);
+}
+
+.my-question-categorias,
+.my-question-opciones {
+  margin-top: var(--spacing-2);
+}
+
+.my-question-categorias strong,
+.my-question-opciones strong {
+  font-size: var(--text-sm);
+  color: var(--text-color);
+}
+
+.my-question-categorias ul,
+.my-question-opciones ul {
+  padding-left: 1.2rem;
+  margin: 4px 0;
+}
+
+.my-question-categorias li,
+.my-question-opciones li {
+  font-size: var(--text-sm);
+  margin-bottom: 4px;
+}
+
+.my-question-opciones li.correct {
+  font-weight: 500;
+  color: var(--success);
+}
+
+.empty-state {
+  text-align: center;
+  font-size: var(--text-base);
+  color: #555;
+  margin-top: var(--spacing-4);
+  font-style: italic;
+}
+
+.loading,
+.error {
+  padding: var(--spacing-4);
+  text-align: center;
+  font-size: var(--text-base);
+}
+
+.error {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+/* ========================== */
+/*        DARK MODE FIX       */
+/* ========================== */
+
+.dark .my-questions-container {
+  background-color: #121212;
+}
+
+.dark .my-question-card {
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dark .my-questions-container h2,
+.dark .my-question-card h3 {
+  color: #90caf9;
+}
+
+.dark .my-question-card p,
+.dark .my-question-categorias strong,
+.dark .my-question-opciones strong,
+.dark .my-question-categorias li,
+.dark .my-question-opciones li,
+.dark .empty-state {
+  color: #e0e0e0;
+}
+
+.dark .my-question-meta {
+  color: #aaa;
+}
+
+.dark .error {
+  color: #f06292;
+}
+
+/* ========================== */
+/*           FILTROS          */
+/* ========================== */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+  align-items: center;
+}
+
+.filters select,
+.filters input[type="date"],
+.categoria-filtro-container input[type="text"],
+.datepicker-custom {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: var(--text-base);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filters select:focus,
+.filters input[type="date"]:focus,
+.categoria-filtro-container input[type="text"]:focus,
+.datepicker-custom:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  outline: none;
+}
+
+.dark .filters select,
+.dark .filters input[type="date"],
+.dark .categoria-filtro-container input[type="text"],
+.dark .datepicker-custom {
+  background-color: #2a2a3d;
+  color: #eee;
+  border-color: #555;
+}
+
+.dark .filters select:focus,
+.dark .filters input[type="date"]:focus,
+.dark .categoria-filtro-container input[type="text"]:focus,
+.dark .datepicker-custom:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(144, 202, 249, 0.2);
+}
+
+/* ========================== */
+/*    FILTRO CATEGORÍA UI     */
+/* ========================== */
+
+.categoria-filtro-container {
+  position: relative;
+  width: 300px;
+}
+
+.categoria-filtro-container input[type="text"] {
+  width: 100%;
+  padding: 8px 36px 8px 12px;
+}
+
+.categoria-toggle {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.categoria-clear {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #999;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.categoria-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  z-index: 10;
+}
+
+.categoria-item-filtro {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  transition: background 0.2s;
+}
+
+.categoria-item-filtro:hover {
+  background: #f5f5f5;
+}
+
+.no-results {
+  padding: 12px;
+  text-align: center;
+  color: #777;
+}
+
+.dark .categoria-filtro-container input[type="text"] {
+  background-color: #1e1e2f;
+  color: white;
+  border-color: #444;
+}
+
+.dark .categoria-toggle,
+.dark .categoria-clear {
+  color: #bbb;
+}
+
+.dark .categoria-dropdown {
+  background: #1e1e2f;
+  border-color: #444;
+}
+
+.dark .categoria-item-filtro {
+  color: white;
+}
+
+.dark .categoria-item-filtro:hover {
+  background: #2a2a3d;
+}
+
+.dark .no-results {
+  color: #aaa;
+}
+
+/* ========================== */
+/*      DATEPICKER ESTILO     */
+/* ========================== */
+
+.datepicker-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+.datepicker-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+}
+
+.dark .datepicker-icon {
+  color: #bbb;
+}
+
+.dark .react-datepicker {
+  background-color: #1e1e2f;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.dark .react-datepicker__header {
+  background-color: #2a2a3d;
+  border-bottom: 1px solid #444;
+}
+
+.dark .react-datepicker__current-month,
+.dark .react-datepicker__day-name,
+.dark .react-datepicker__day,
+.dark .react-datepicker-time__header {
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dark .react-datepicker__day--selected,
+.dark .react-datepicker__day--keyboard-selected {
+  background-color: var(--primary);
+  color: white;
+}
+
+.dark .react-datepicker__day:hover {
+  background-color: #333;
+  color: white;
+}
+
+.dark .react-datepicker__navigation-icon::before {
+  border-color: #ccc;
+}
+
+.dark .react-datepicker__triangle {
+  border-bottom-color: #2a2a3d !important;
+}
+
+.react-datepicker__day {
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}

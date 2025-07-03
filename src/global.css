@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --primary: #4361ee;
+  --secondary: #3f37c9;
+  --accent: #f72585;
+  --background: #f5f7ff;
+  --text-color: #212529;
+  --success: #4cc9f0;
+  --danger: #ef233c;
+  --warning: #f8961e;
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+
+/* === Modo oscuro para Ant Design === */
+.dark .ant-layout,
+.dark .ant-layout-content {
+  background-color: #121212 !important;
+  color: var(--text-color) !important;
+}
+
+.dark .ant-card,
+.dark .ant-card-body,
+.dark .ant-table,
+.dark .ant-table-cell,
+.dark .ant-table-thead > tr > th {
+  background-color: #1e1e2f !important;
+  color: var(--text-color) !important;
+}
+
+.dark .ant-input,
+.dark .ant-select-selector,
+.dark .ant-input-number,
+.dark .ant-input-number-input,
+.dark .ant-picker {
+  background-color: #1e1e2f !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+.dark .ant-select-dropdown,
+.dark .ant-picker-dropdown {
+  background-color: #1e1e2f !important;
+  color: #fff !important;
+}
+
+.dark .ant-btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.dark .ant-btn-default {
+  background-color: #2a2a3d !important;
+  color: var(--text-color) !important;
+  border-color: #444 !important;
+}
+
+.dark .ant-btn-default:hover {
+  background-color: #3a3a4d !important;
+}

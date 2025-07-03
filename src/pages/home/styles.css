@@ -1,0 +1,116 @@
+/* ========== General ========== */
+
+.container-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f5f8ff;
+}
+
+.card-category {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.2s;
+}
+
+.card-category:hover {
+  transform: scale(1.03);
+}
+
+.card-category h3 {
+  color: #2d3ed2;
+  margin-bottom: 10px;
+}
+
+.card-category p {
+  margin: 0;
+  color: #555;
+}
+
+.counter {
+  margin-top: 10px;
+  color: #e6007e;
+  font-weight: bold;
+}
+
+.home-content {
+  padding: 24px;
+  min-height: 280px;
+  background-color: #f5f8ff;
+}
+
+/* ========== Dark Mode ========== */
+
+.dark .container-categories {
+  background-color: #121212;
+}
+
+.dark .card-category {
+  background-color: #1e1e2f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dark .card-category h3 {
+  color: #90caf9;
+}
+
+.dark .card-category p {
+  color: #ccc;
+}
+
+.dark .counter {
+  color: #f06292;
+}
+
+.dark .home-content {
+  background-color: #121212;
+}
+
+/* Estilos específicos para Input.Search en dark mode */
+
+.dark .ant-input,
+.dark .ant-input-affix-wrapper {
+  background-color: #1e1e2f !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+.dark .ant-input::placeholder {
+  color: #aaa !important;
+}
+
+.dark .anticon-search {
+  color: #aaa !important;
+}
+
+
+/* Forzar estilos oscuros en Input.Search de Ant Design */
+.dark .ant-input-affix-wrapper {
+  background-color: #1e1e2f !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+.dark .ant-input-affix-wrapper .ant-input {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.dark .ant-input-affix-wrapper .ant-input::placeholder {
+  color: #aaa !important;
+}
+
+.dark .ant-input-affix-wrapper .anticon {
+  color: #aaa !important;
+}
+
+
+
+/* Mejora de legibilidad para títulos en dark mode */
+.dark .ant-typography {
+  color: #f0f0f0; 
+}

@@ -1,0 +1,262 @@
+:root {
+  --space-unit: 8px;
+  --space-sm: calc(var(--space-unit) * 1);
+  --space-md: calc(var(--space-unit) * 2);
+  --space-lg: calc(var(--space-unit) * 3);
+  --space-xl: calc(var(--space-unit) * 4);
+}
+
+/* Estilos claros */
+.progress-section {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.progress-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3d5afe;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.streak-count {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e91e63;
+  line-height: 1;
+}
+
+.streak-label,
+.xp-info {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.xp-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.xp-progress {
+  height: 100%;
+  background: linear-gradient(to right, #42a5f5, #1e88e5);
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.rank-badge {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3d5afe;
+  display: flex;
+  align-items: center;
+}
+
+.rank-badge .star {
+  margin-left: 4px;
+}
+
+/* Sidebar base */
+.sidebar {
+  background-color: #f0f2f5;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.sidebar-header {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f0f2f5;
+  flex-shrink: 0;
+}
+
+.sidebar-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.sidebar-toggle-button {
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.sidebar-toggle-button--collapsed {
+  margin-left: 8px;
+}
+
+.sidebar-toggle-button--expanded {
+  margin-left: auto;
+}
+
+.sidebar-user-section {
+  padding: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sidebar-user-title {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.sidebar-menu {
+  flex-shrink: 0;
+}
+
+.sidebar-progress-section {
+  flex-shrink: 0;
+  padding: 0 16px;
+}
+
+.sidebar-logout-section {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+  background-color: #f0f2f5;
+  flex-shrink: 0;
+}
+
+/* ========================== */
+/*         DARK MODE          */
+/* ========================== */
+.dark .progress-section {
+  background-color: #1e1e2f;
+  box-shadow: none;
+}
+
+.dark .progress-title,
+.dark .rank-badge {
+  color: #90caf9;
+}
+
+.dark .streak-label,
+.dark .xp-info {
+  color: #bbb;
+}
+
+.dark .xp-bar {
+  background-color: #333;
+}
+
+.dark .sidebar {
+  background-color: #121212;
+}
+
+.dark .sidebar-header {
+  background-color: #121212;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.dark .sidebar-logout-section {
+  background-color: #121212;
+  border-top: 1px solid #2a2a2a;
+}
+
+.dark .sidebar-user-title {
+  color: white;
+}
+
+
+/* ================================== */
+/*       DARK MODE PARA MENÚ         */
+/* ================================== */
+.dark .ant-menu {
+  background-color: #1e1e2f !important;
+  color: #e0e0e0 !important;
+}
+
+.dark .ant-menu-item,
+.dark .ant-menu-item a {
+  color: #e0e0e0 !important;
+}
+
+.dark .ant-menu-item:hover {
+  background-color: #2a2a3d !important;
+  color: #ffffff !important;
+}
+
+.dark .ant-menu-item-selected {
+  background-color: #2c3e50 !important;
+  color: #90caf9 !important;
+}
+
+.dark .ant-menu-item-icon {
+  color: #90caf9 !important;
+}
+
+/* ========================== */
+/*     BOTÓN DARK MODE       */
+/* ========================== */
+
+/* Estilo claro */
+.ant-btn.dark-mode-toggle {
+  background-color: #ffffff;
+  color: #121212 !important;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover en claro */
+.ant-btn.dark-mode-toggle:hover {
+  background-color: #f5f5f5;
+  color: #000 !important;
+  border-color: #888;
+}
+
+/* Estilo oscuro */
+.dark .ant-btn.dark-mode-toggle {
+  background-color: #2a2a3d !important;
+  color: #ffffff !important;
+  border: 1px solid #888 !important;
+  font-weight: 500;
+}
+
+/* Hover en oscuro */
+.dark .ant-btn.dark-mode-toggle:hover {
+  background-color: #3a3a4f !important;
+  color: #ffffff !important;
+  border-color: #aaa !important;
+}
+
+/* Estado deshabilitado */
+.dark .ant-btn.dark-mode-toggle[disabled],
+.ant-btn.dark-mode-toggle[disabled] {
+  background-color: #3a3a4f !important;
+  color: #999 !important;
+  border: 1px solid #666 !important;
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
